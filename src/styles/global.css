@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #0C2888;
+    --secondary-color: #FF5335;
+    --background: white;
+    --padding-sm: 10px;
+    --padding-md: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: white;
+        --background: #0C2888;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
