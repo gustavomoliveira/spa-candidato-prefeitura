@@ -15,6 +15,7 @@
     justify-content: space-between;
     padding: var(--padding-md);
     background-color: var(--background);
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .menu {
@@ -25,6 +26,7 @@
     position: absolute;
     list-style: none;
     display: none;
+    align-items: center;
     width: 50vw;
     flex-direction: column;
     gap: 25px;
@@ -32,6 +34,8 @@
     font-size: 1.5rem;
     font-weight: bold;
     z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--padding-md));
 }
 
 .menuLista a {
@@ -39,7 +43,7 @@
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: 1px;
-    transform-origin: left;
+    transform-origin: center;
     transition: transform 0.3s ease;
 }
 
@@ -110,6 +114,8 @@
         gap: 15px;
         align-items: center;
         font-size: 1.3rem;
+        background-color: transparent;
+        backdrop-filter: none;
     }
 
     .menuLista a {
