@@ -2,6 +2,7 @@ import "./styles/global.css";
 import Header from './components/Header';
 import Biografia from "./components/Biografia";
 import Proposta from "./components/Proposta";
+import Agenda from "./components/Agenda";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
           <Header />
           <Biografia />
           <Proposta />
+          <Agenda />
       </div>
   );
 }
