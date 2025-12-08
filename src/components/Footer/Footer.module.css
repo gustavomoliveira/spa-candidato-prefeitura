@@ -1,0 +1,169 @@
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--background);
+    color: var(--primary-color);
+    padding: var(--padding-md);
+    border-top: 3px solid var(--secondary-color);
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.secao h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.redesSociais {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.iconeRede {
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.iconeRede:hover {
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contato p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    line-height: 1.6;
+}
+
+.iconeContato {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.contato a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.contato span {
+    color: var(--primary-color);
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--primary-color);
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .footer {
+        max-width: 768px;
+        padding: var(--padding-lg);
+    }
+
+    .conteudo {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 3rem;
+    }
+
+    .secao {
+        flex: 1;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .secao h3 {
+        font-size: 1.7rem;
+    }
+
+    .redesSociais {
+        justify-content: flex-start;
+    }
+
+    .contato p {
+        justify-content: flex-start;
+    }
+
+    .iconeRede {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        max-width: 1200px;
+        padding: var(--padding-lg);
+    }
+
+    .conteudo {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 4rem;
+    }
+
+    .secao {
+        flex: 1;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .secao h3 {
+        font-size: 1.8rem;
+    }
+
+    .redesSociais {
+        justify-content: flex-start;
+    }
+
+    .contato p {
+        justify-content: flex-start;
+    }
+
+    .iconeRede {
+        font-size: 2.5rem;
+    }
+
+    .iconeContato {
+        font-size: 1.3rem;
+    }
+}

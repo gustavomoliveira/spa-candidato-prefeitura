@@ -11,6 +11,29 @@
     padding: 0 var(--padding-md);
 }
 
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.iconeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: var(--background);
+}
+
+.iconeContainer svg {
+    font-size: 2rem;
+}
+
 .subtitulo {
     color: var(--secondary-color);
     font-size: 1.5rem;
@@ -57,6 +80,15 @@
         font-size: 1.9rem;
     }
 
+    .iconeContainer {
+        width: 70px;
+        height: 70px;
+    }
+
+    .iconeContainer svg {
+        font-size: 2.3rem;
+    }
+
     .subtitulo {
         grid-area: subtitulo;
         justify-self: center;
@@ -93,6 +125,15 @@
         font-size: 2.8rem;
     }
 
+    .iconeContainer {
+        width: 80px;
+        height: 80px;
+    }
+
+    .iconeContainer svg {
+        font-size: 2.5rem;
+    }
+
     .subtitulo {
         grid-area: subtitulo;
         justify-self: center;
@@ -111,5 +152,4 @@
     .listaSimples li {
         font-size: 1.1rem;
     }
-
 }
