@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Biografia from "./components/Biografia";
 import Proposta from "./components/Proposta";
 import Agenda from "./components/Agenda";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Biografia />
           <Proposta />
           <Agenda />
+          <Footer />
       </div>
   );
 }

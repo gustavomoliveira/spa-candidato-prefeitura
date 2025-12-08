@@ -37,13 +37,19 @@ export default function Header() {
                     <a href="#">Marco Madureira</a>
                 </div>
 
-                <Button sx={{
-                    p: 2,
-                    borderRadius: 7,
-                    fontWeight: 'bold',
-                    backgroundColor: 'var(--primary-color)',
-                    color: 'var(--background)',
-                }} variant="contained" endIcon={<ChevronRightIcon/>}>
+                <Button
+                    component="a"
+                    href="mailto:contato@marcomadureira.com.br"
+                    sx={{
+                        p: 2,
+                        borderRadius: 7,
+                        fontWeight: 'bold',
+                        backgroundColor: 'var(--primary-color)',
+                        color: 'var(--background)',
+                    }}
+                    variant="contained"
+                    endIcon={<ChevronRightIcon/>}
+                >
                     Fale Conosco
                 </Button>
             </header>
