@@ -1,0 +1,155 @@
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: var(--background);
+    color: var(--primary-color);
+    padding: 0 var(--padding-md);
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.iconeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: var(--background);
+}
+
+.iconeContainer svg {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.listaSimples {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.listaSimples li {
+    padding: 0.75rem 1rem;
+    background-color: var(--background);
+    border-left: 3px solid var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .cards {
+        max-width: 768px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo"
+            ". ."
+            ". ."
+            ". ."
+            "subtitulo subtitulo"
+            "lista lista";
+        align-items: start;
+    }
+
+    .cards h2 {
+        grid-area: titulo;
+        justify-self: center;
+        font-size: 1.9rem;
+    }
+
+    .iconeContainer {
+        width: 70px;
+        height: 70px;
+    }
+
+    .iconeContainer svg {
+        font-size: 2.3rem;
+    }
+
+    .subtitulo {
+        grid-area: subtitulo;
+        justify-self: center;
+        margin-top: 0.75rem;
+        font-size: 1.7rem;
+    }
+
+    .listaSimples {
+        grid-area: lista;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cards {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulo titulo titulo"
+            ". . ."
+            ". . ."
+            "subtitulo subtitulo subtitulo"
+            "lista lista lista";
+        align-items: stretch;
+    }
+
+    .cards h2 {
+        grid-area: titulo;
+        justify-self: center;
+        font-size: 2.8rem;
+    }
+
+    .iconeContainer {
+        width: 80px;
+        height: 80px;
+    }
+
+    .iconeContainer svg {
+        font-size: 2.5rem;
+    }
+
+    .subtitulo {
+        grid-area: subtitulo;
+        justify-self: center;
+        margin-top: 0.75rem;
+        font-size: 2rem;
+    }
+
+    .listaSimples {
+        grid-area: lista;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .listaSimples li {
+        font-size: 1.1rem;
+    }
+}

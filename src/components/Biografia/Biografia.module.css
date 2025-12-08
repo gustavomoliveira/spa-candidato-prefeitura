@@ -1,0 +1,232 @@
+.biografia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--background);
+    color: var(--primary-color);
+    padding: var(--padding-md);
+}
+
+.biografia h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.destaque {
+    color: var(--secondary-color);
+}
+
+.imagemMobile {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.imagemTablet {
+    display: none;
+}
+
+.conteudoWrapper {
+    width: 100%;
+}
+
+.timelineContainer {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timelineContainer::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--secondary-color);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.timelineMarker {
+    position: absolute;
+    left: -31px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--background);
+    box-shadow: 0 0 0 3px var(--secondary-color);
+}
+
+.timelineContent h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.timelineContent p {
+    line-height: 1.6;
+    text-align: justify;
+    color: var(--primary-color);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .biografia {
+        max-width: 768px;
+        padding: var(--padding-lg);
+    }
+
+    .biografia h2 {
+        font-size: 2.2rem;
+    }
+
+    .imagemMobile {
+        display: none;
+    }
+
+    .imagemTablet {
+        display: block;
+        width: 300px;
+        height: 100%;
+        min-height: 1100px;
+        object-fit: cover;
+        object-position: 70%;
+        border: 3px solid var(--primary-color);
+        border-radius: 8px;
+        align-self: center;
+    }
+
+    .conteudoWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .timelineContainer {
+        flex: 1;
+        max-width: none;
+        padding-left: 50px;
+    }
+
+    .timelineContainer::before {
+        left: 20px;
+    }
+
+    .timelineMarker {
+        left: -36px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .timelineContent h3 {
+        font-size: 1.5rem;
+    }
+
+    .timelineContent p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+}
+
+@media (min-width: 1200px) {
+    .biografia {
+        max-width: 1200px;
+        padding: var(--padding-lg);
+    }
+
+    .biografia h2 {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .imagemMobile {
+        display: block;
+        max-width: 700px;
+        margin-bottom: 3rem;
+    }
+
+    .imagemTablet {
+        display: none;
+    }
+
+    .conteudoWrapper {
+        width: 100%;
+    }
+
+    .timelineContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 0;
+        max-width: 100%;
+        gap: 1rem;
+        position: relative;
+    }
+
+    .timelineContainer::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30px;
+        bottom: auto;
+        width: 100%;
+        height: 3px;
+        background-color: var(--secondary-color);
+    }
+
+    .timelineItem {
+        flex: 1;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timelineMarker {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        margin-bottom: 1rem;
+        z-index: 1;
+    }
+
+    .timelineContent {
+        text-align: center;
+    }
+
+    .timelineContent h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .timelineContent p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+}

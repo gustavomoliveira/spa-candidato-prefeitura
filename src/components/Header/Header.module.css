@@ -1,0 +1,145 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 998;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: var(--padding-md);
+    background-color: var(--background);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.menu {
+    position: relative;
+}
+
+.menuLista {
+    position: absolute;
+    list-style: none;
+    display: none;
+    align-items: center;
+    width: 50vw;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--padding-md));
+}
+
+.menuLista a {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.menuLista a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.menuLista.aberto {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.logo svg {
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        max-width: 768px;
+    }
+
+    .logo svg {
+        font-size: 2rem;
+    }
+
+    .logo a {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        max-width: 1200px;
+    }
+
+    .menu {
+        position: static;
+        align-items: center;
+        display: flex;
+        margin-right: auto;
+    }
+
+    .menuBurger.menuBurger {
+        display: none;
+    }
+
+    .menuLista {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        gap: 15px;
+        align-items: center;
+        font-size: 1.3rem;
+        background-color: transparent;
+        backdrop-filter: none;
+    }
+
+    .menuLista a {
+        transition: none;
+    }
+
+    .menuLista a:hover {
+        transform: none;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menuLista a {
+        transition: none;
+    }
+
+    .menuLista a:hover {
+        transform: none;
+    }
+}
