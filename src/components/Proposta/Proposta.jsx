@@ -72,7 +72,7 @@ export default function Proposta() {
                 </Card>
             ))}
 
-            <h3 className={styles.subtitulo}>E MUITO Mais...</h3>
+            <h3 className={styles.subtitulo}>E muito mais...</h3>
 
             <ul className={styles.listaSimples}>
                 {outrasPropostas.map((proposta, index) => (

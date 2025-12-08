@@ -1,0 +1,84 @@
+.agenda {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--background);
+    color: var(--primary-color);
+    padding: var(--padding-md);
+}
+
+.agenda h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.eventosContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.eventoCard {
+    width: 100%;
+}
+
+.cardHeader {
+    background-color: var(--secondary-color);
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.dataHorario {
+    color: var(--background) !important;
+    font-weight: bold !important;
+    font-size: 1rem !important;
+}
+
+.cardContent {
+    flex: 1;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .agenda {
+        max-width: 768px;
+        padding: var(--padding-lg);
+    }
+
+    .agenda h2 {
+        font-size: 2.2rem;
+    }
+
+    .eventosContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+}
+
+@media (min-width: 1200px) {
+    .agenda {
+        max-width: 1200px;
+        padding: var(--padding-lg);
+    }
+
+    .agenda h2 {
+        font-size: 2.8rem;
+    }
+
+    .eventosContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .dataHorario {
+        font-size: 1.1rem !important;
+    }
+}
