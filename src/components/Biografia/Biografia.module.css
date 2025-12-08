@@ -1,192 +1,232 @@
 .biografia {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 0 auto;
-    gap: 0.7rem;
     background-color: var(--background);
     color: var(--primary-color);
     padding: var(--padding-md);
 }
 
-.spanTitulo {
-    color: var(--secondary-color);
-    font-size: 1.9rem;
+.biografia h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
-.biografia img {
+.destaque {
+    color: var(--secondary-color);
+}
+
+.imagemMobile {
+    display: block;
     width: 100%;
+    max-width: 500px;
     height: auto;
     object-fit: cover;
     border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
-.imgMobile {
-    display: block;
+.imagemTablet {
+    display: none;
 }
 
-.imgTelaGrande {
-   display: none;
+.conteudoWrapper {
+    width: 100%;
 }
 
-.biografia p {
+.timelineContainer {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timelineContainer::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--secondary-color);
+}
+
+.timelineItem {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timelineItem:last-child {
+    margin-bottom: 0;
+}
+
+.timelineMarker {
+    position: absolute;
+    left: -31px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: 3px solid var(--background);
+    box-shadow: 0 0 0 3px var(--secondary-color);
+}
+
+.timelineContent h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.timelineContent p {
+    line-height: 1.6;
     text-align: justify;
-    line-height: 1.5;
+    color: var(--primary-color);
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
     .biografia {
         max-width: 768px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "titulo titulo"
-            "texto1 imagem1"
-            "imagem2 texto2";
-        gap: 1rem;
+        padding: var(--padding-lg);
     }
 
     .biografia h2 {
-        grid-area: titulo;
-        font-size: 2rem;
-        justify-self: center;
+        font-size: 2.2rem;
     }
 
-    .spanTitulo {
-        font-size: 2.5rem;
+    .imagemMobile {
+        display: none;
     }
 
-    .biografia p {
-        line-height: 1.8;
+    .imagemTablet {
+        display: block;
+        width: 300px;
+        height: 100%;
+        min-height: 1100px;
+        object-fit: cover;
+        object-position: 70%;
+        border: 3px solid var(--primary-color);
+        border-radius: 8px;
+        align-self: center;
     }
 
-    .p1 {
-        grid-area: texto1;
-        align-self: start;
+    .conteudoWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
     }
 
-    .spanLetra {
+    .timelineContainer {
+        flex: 1;
+        max-width: none;
+        padding-left: 50px;
+    }
+
+    .timelineContainer::before {
+        left: 20px;
+    }
+
+    .timelineMarker {
+        left: -36px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .timelineContent h3 {
         font-size: 1.5rem;
     }
 
-    .spanFraseFinal {
-        font-size: 2rem;
-        padding-left: 5px;
-    }
-
-    .spanLetra, .spanFraseFinal {
-        font-weight: bold;
-        color: var(--secondary-color);
-    }
-
-    .biografia .imgMobile {
-        grid-area: imagem1;
-        align-self: start;
-        height: 450px;
-        object-position: -330px;
-    }
-
-    .biografia .imgTelaGrande {
-        grid-area: imagem2;
-        display: block;
-        align-self: start;
-        height: 570px;
-        object-position: -270px;
-    }
-
-    .p2 {
-        grid-area: texto2;
-        align-self: start;
+    .timelineContent p {
+        font-size: 1.05rem;
+        line-height: 1.7;
     }
 }
 
 @media (min-width: 1200px) {
     .biografia {
-        position: relative;
         max-width: 1200px;
-        padding: var(--padding-md) var(--padding-lg);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas:
-            "titulo titulo titulo"
-            "imagem1 imagem1 imagem1"
-            "divisoria1 divisoria1 divisoria1"
-            "texto1 texto1 imagem2"
-            "divisoria2 divisoria2 divisoria2"
-            "texto2 texto2 texto2";
+        padding: var(--padding-lg);
     }
 
     .biografia h2 {
-        position: absolute;
-        grid-area: titulo;
-        top: 160px;
-        left: 110px;
         font-size: 2.8rem;
+        margin-bottom: 2rem;
     }
 
-    .spanTitulo {
-        font-size: 3.2rem;
-        text-shadow:
-                1px 1px 2px rgba(0, 0, 0, 0.2),
-                2px 2px 4px rgba(0, 0, 0, 0.15),
-                3px 3px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .biografia .imgMobile {
-        grid-area: imagem1;
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        object-position: top;
-    }
-
-    .biografia p {
-        line-height: 1.6;
-        align-self: start;
-    }
-
-    .biografia .p1 {
-        grid-area: texto1;
-        font-size: 1.4rem;
-    }
-
-    .spanLetra {
-        padding-right: 3px;
-    }
-
-    .spanLetra, .spanFraseFinal {
-        font-weight: bold;
-        color: var(--secondary-color);
-    }
-
-    .spanFraseFinal {
-        padding-left: 5px;
-    }
-
-    .biografia .imgTelaGrande {
+    .imagemMobile {
         display: block;
-        grid-area: imagem2;
-        align-self: start;
-        margin-top: 8px;
+        max-width: 700px;
+        margin-bottom: 3rem;
     }
 
-    .biografia div {
-        height: 2px;
+    .imagemTablet {
+        display: none;
+    }
+
+    .conteudoWrapper {
         width: 100%;
-        background-color: var(--primary-color);
     }
 
-    .divisoria1 {
-        grid-area: divisoria1;
+    .timelineContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 0;
+        max-width: 100%;
+        gap: 1rem;
+        position: relative;
     }
 
-    .divisoria2 {
-        grid-area: divisoria2;
+    .timelineContainer::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 30px;
+        bottom: auto;
+        width: 100%;
+        height: 3px;
+        background-color: var(--secondary-color);
     }
 
-    .biografia .p2 {
-        grid-area: texto2;
-        font-size: 1.1rem;
+    .timelineItem {
+        flex: 1;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timelineMarker {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        margin-bottom: 1rem;
+        z-index: 1;
+    }
+
+    .timelineContent {
+        text-align: center;
+    }
+
+    .timelineContent h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .timelineContent p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
     }
 }
