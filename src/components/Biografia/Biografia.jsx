@@ -39,7 +39,7 @@ export default function Biografia() {
             <h2>A Trajetória de <span className={styles.destaque}>Marco Madureira</span></h2>
 
             <img
-                src="/images/homem-de-negocios-sorrindo-retrato.jpg"
+                src="/images/marco-madureira-retrato-mobile.jpg"
                 alt="Marco Madureira"
                 className={styles.imagemMobile}
             />
@@ -58,7 +58,7 @@ export default function Biografia() {
                 </div>
 
                 <img
-                    src="/images/homem-de-negocios-sorrindo-retrato (1).jpg"
+                    src="/images/marco-madureira-retrato-tablet.jpg"
                     alt="Marco Madureira"
                     className={styles.imagemTablet}
                 />
